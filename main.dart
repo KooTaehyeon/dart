@@ -6,6 +6,14 @@ void main() {
   // 여전히 final 변수 이기 떄문에 딱 한번만 할당해줄수 있음
   //name = 'new';
   // const  dart 에서는 컴파일 타임 constant 를 만들어줌
-  const name = '태현';
+  //const name = '태현';
   // name = '태현2' 컴파일 이후 처음 설정 값이후로 절대로 바뀌지 않음
+  // null safety : 잘못된 상태의 변수를 참조하는걸 막아줌 null 값을 의도적으로 명시하고 싶을떄 사용 String? name; 명시해줌.
+  // String? name = 'xogus';
+  //name.isEmpty; X
+  // if (name != null) {
+  //   name = null;
+  //   // isEmpty를 사용할경우는 이렇게!
+  //   name?.isEmpty;
+  // }
 }
