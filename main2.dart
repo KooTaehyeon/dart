@@ -33,4 +33,15 @@ void main() {
     for (var friend in oldFriends) '🥰 $friend',
   ];
   print(newFriends);
+  // Maps
+  // Map<int,bool> player = {} 맨처음 int로 했기때문에 키값 은 int 벨류값은 bool로 할당해주어야 한다.
+  var player = [
+    {
+      // var로 하게된다면 컴파일러가 대신 키와 벨류값의 자료형을 유추해줌
+      'name': '태현',
+      'xp': 19.99,
+      'superpower': false,
+    }
+  ];
+  print(player[0]);
 }
