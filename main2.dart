@@ -44,4 +44,8 @@ void main() {
     }
   ];
   print(player[0]);
+  // Sets Set 와 List 의 차이는 set에 속한 모든 아이템들은 유니크함 set를 사용할떄는 {} 를 사용함
+  // set 요소가 항상 하나씩만 있어야할때는 Set를 사용하면 좋음.
+  Set<int> numbers2 = {1, 2, 3, 4}; //var numbers2 = {1, 2, 3, 4};
+  print(numbers2);
 }
