@@ -4,6 +4,8 @@ String sayHello(
 String sayHello2(String name, int age, [String? country = '한국3']) =>
     'Hello $name you are $age, and you comefrom $country !';
 num plus(num a, num b) => a + b;
+String capotalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+
 void main() {
   //late final String name; // 처음에 변수에 데이터 없이 넣을수 있을 나중에 api 를 호출해서 데이터 를 넣기에 좋음
   // 그리고 값을 넣기전에는 접근을 할수 없기 떄문에 사전에 실수를 방지 할수 있음.
@@ -25,5 +27,12 @@ void main() {
   print(sayHello(name: '태현', age: 29, country: '한국'));
   var results = sayHello2('태현', 28);
   print(results);
+  capotalizeName('xogus');
+  capotalizeName(null);
   print(plus(1, 3));
+  String? name3;
+  name3 ??= 'nico';
+  name3 = null;
+  name3 ??= '태현';
+  print(name3);
 }
