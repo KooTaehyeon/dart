@@ -19,8 +19,15 @@ String sayHi(UserInfo userInfo) {
 
 // class 클래스 생성시에는 무조건 타입을 설정 해줘야함
 class Player {
-  final String name = 'nico';
-  int xp = 1500;
+  final String name;
+  int xp;
+  String team;
+  int age;
+  Player(
+      {required this.name,
+      required this.xp,
+      required this.team,
+      required this.age}); // constructors 생성자
   void sayHellos() {
     print('Hi my name is ${name}');
   }
@@ -59,9 +66,11 @@ void main() {
   // print(reverseListOfNumbers([1, 2, 3]));
 
 // class
-  var player = Player();
+  var player = Player(name: 'xogus', xp: 3000, team: 'siiker', age: 29);
 
   print(player.name);
   print(player.xp);
   player.sayHellos();
+  print('---------------------');
+  print(player);
 }
