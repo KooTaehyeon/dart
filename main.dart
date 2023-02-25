@@ -6,6 +6,26 @@ String sayHello2(String name, int age, [String? country = '한국3']) =>
 num plus(num a, num b) => a + b;
 String capotalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
 
+// typedef
+// typedef ListOfInts = List<int>;
+// List<int> reverseListOfNumbers(List<int> list) {
+//   var reversed = list.reversed;
+//   return reversed.toList();
+// }
+typedef UserInfo = Map<String, String>;
+String sayHi(UserInfo userInfo) {
+  return 'Hi ${userInfo['name']}';
+}
+
+// class 클래스 생성시에는 무조건 타입을 설정 해줘야함
+class Player {
+  final String name = 'nico';
+  int xp = 1500;
+  void sayHellos() {
+    print('Hi my name is ${name}');
+  }
+}
+
 void main() {
   //late final String name; // 처음에 변수에 데이터 없이 넣을수 있을 나중에 api 를 호출해서 데이터 를 넣기에 좋음
   // 그리고 값을 넣기전에는 접근을 할수 없기 떄문에 사전에 실수를 방지 할수 있음.
@@ -35,4 +55,13 @@ void main() {
   name3 = null;
   name3 ??= '태현';
   print(name3);
+  print(sayHi({'name': 'nico'}));
+  // print(reverseListOfNumbers([1, 2, 3]));
+
+// class
+  var player = Player();
+
+  print(player.name);
+  print(player.xp);
+  player.sayHellos();
 }
