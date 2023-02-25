@@ -28,6 +28,16 @@ class Player {
       required this.xp,
       required this.team,
       required this.age}); // constructors 생성자
+  Player.createBluePlayer({required String name, required int age})
+      : this.age = age,
+        this.name = name,
+        this.team = 'blue',
+        this.xp = 0;
+  Player.createRedPlayer({required String name, required int age})
+      : this.age = age,
+        this.name = name,
+        this.team = 'red',
+        this.xp = 2;
   void sayHellos() {
     print('Hi my name is ${name}');
   }
@@ -66,11 +76,22 @@ void main() {
   // print(reverseListOfNumbers([1, 2, 3]));
 
 // class
-  var player = Player(name: 'xogus', xp: 3000, team: 'siiker', age: 29);
 
+  var player = Player(name: 'xogus', xp: 3000, team: 'red', age: 29);
+  print(player);
   print(player.name);
   print(player.xp);
+
   player.sayHellos();
   print('---------------------');
-  print(player);
+
+  var player2 = Player.createBluePlayer(name: 'xogus', age: 29);
+  print(player2.age);
+  print(player2.xp);
+  print(player2);
+  print('---------------------');
+  var player3 = Player.createRedPlayer(name: 'xogus', age: 29);
+  print(player3.team);
+  print(player3.xp);
+  print(player3);
 }
