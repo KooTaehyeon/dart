@@ -1,3 +1,15 @@
+import 'dart:ffi';
+
+class Player {
+  String name;
+  int xp;
+  String team;
+  Player({required this.name, required this.xp, required this.team});
+  void sayHello() {
+    print('Hi my name is $name');
+  }
+}
+
 void main() {
   // dart 기본 자료형
   String name = '태현'; // 정의할때에는 작은 따옴표를 사용
@@ -48,4 +60,11 @@ void main() {
   // set 요소가 항상 하나씩만 있어야할때는 Set를 사용하면 좋음.
   Set<int> numbers2 = {1, 2, 3, 4}; //var numbers2 = {1, 2, 3, 4};
   print(numbers2);
+  var xoguss = Player(name: 'xogus', xp: 1200, team: 'red');
+  var potat = xoguss
+    ..name = 'xogus12'
+    ..xp = 300
+    ..sayHello();
+  print('__________________');
+  // print(potat.sayHello());
 }
